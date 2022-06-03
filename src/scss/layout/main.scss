@@ -1,0 +1,16 @@
+.main {
+  height: 100%;
+  background: url("../img/bg.jpg") no-repeat center / cover;
+  align-content: flex-start;
+}
+
+@supports (-webkit-appearance: none) {
+  .main {
+    background: url("../img/bg.webp") no-repeat center / cover;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+$breakpoint-sm: 320px;
+$breakpoint-xs: 425px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+
+$whiteColor: #fff; //default white color
+$mainGreenColor: #4AAF42; // main color
+$mainFontColor: #1C1B1F; // It's main color of font
+$strokeFormInputColor: #CACACA; // It's color of input stroke
+$fontFormInputColor: #BEBEBE; // It's color of input font
+
+$greenBorder: 1px solid $mainGreenColor; //border for options
+
+
+$animationStyle: all 0.3s linear; // It's animation style
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+
+$mainFontFamily: "Ubuntu";
+$secondaryFontFamily: "Roboto";
+$fontSize10: 10px;
+$fontSize12: 12px;
+$fontSize14: 14px;
+$fontSize16: 16px;
+$fontSize18: 18px;
+$fontSize20: 20px;
+
+//</Шрифт по умолчанию>==========================================================================================

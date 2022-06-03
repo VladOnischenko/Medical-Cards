@@ -1,0 +1,31 @@
+*::-webkit-scrollbar { /* 1 - скроллбар */
+  width: 10px;
+  height: 8px;
+  background-color: #FFFFFF;
+}
+*::-webkit-scrollbar-button { /* 2 - кнопка */
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 10px; /* 3 - трек */
+  height: 100%;
+}
+
+*::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
+}
+
+*::-webkit-scrollbar-thumb { /* 5 - ползунок */
+  border-radius: 5px;
+  background-color: $mainGreenColor;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-corner {
+  border-radius: 10px;
+  height: 20px;
+  background: #000;/* 6 - уголок */
+}
+
+*::-webkit-resizer {
+  height: 20px/* 7 - изменение размеров */
+}

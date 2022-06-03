@@ -1,0 +1,146 @@
+
+.options {
+  margin: 45px 0;
+  justify-content: center;
+
+  &__input {
+    font-weight: 400;
+    width: 100%;
+    height: 40px;
+    background: $whiteColor;
+    border: $greenBorder;
+    border-radius: 4px;
+    padding: 0 15px;
+    outline: none;
+    position: relative;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    color: $mainFontColor;
+    transition: $animationStyle;
+  }
+
+  &__input-search {
+    padding-right: 36px;
+    &:hover {
+      border: 1px solid #218D18;
+      box-shadow: 0 1px 5px rgba(22, 65, 19, 0.40);
+    }
+  }
+
+  &__input-container {
+    position: relative;
+    margin-right: 20px;
+    max-width: 184px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  &__dropdown-menu {
+    background: #FBFBFB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    width: 100%;
+    & > li {
+      height: 35px;
+      width: 100%;
+    }
+  }
+
+  &__dropdown-item {
+    height: inherit;
+    width: inherit;
+    padding: 0.5rem 1rem;
+    transition: $animationStyle;
+    &:hover {
+      background: rgba(74, 175, 66, 0.3);
+      padding: 0.5rem 1.6rem;
+    }
+  }
+
+  &__button {
+    font-weight: 500;
+    max-width: 92px;
+    height: 40px;
+    color: $mainFontColor;
+    background: $whiteColor;
+    border: $greenBorder;
+    border-radius: 100px;
+    transition: $animationStyle;
+    &:hover {
+      box-shadow: 0 2px 1px rgba(22, 65, 19, 0.25);
+      border: 1px solid #218D18;
+      background: #F9F6FA;
+    }
+    &:active {
+      background: #6750A41F;
+    }
+  }
+
+  &__input-dropbox {
+    &:hover {
+      border: 1px solid #218D18;
+      box-shadow: 0 1px 3px rgba(22, 65, 19, 0.40);
+    }
+
+    &:focus {
+      background: $whiteColor;
+      box-shadow: 0 1px 3px rgba(22, 65, 19, 0.40);
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .options__input-container {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .options {
+    margin: 25px 0;
+    row-gap: 20px;
+    & > * {
+      flex: 1 1 100px;
+    }
+    &__button {
+      max-width: 184px;
+      margin-right: 15px;
+      font-size: $fontSize12;
+
+    }
+    &__input {
+      font-size: $fontSize12;
+    }
+    &__dropdown-item {
+      padding: 1rem 1rem;
+      font-size: $fontSize14;
+      &:hover {
+        padding: 1rem 1rem;
+      }
+    }
+    &__dropdown-menu>li {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .options {
+    &__button {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .options {
+    margin: 20px 0;
+
+  }
+}
+

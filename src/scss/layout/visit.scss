@@ -1,0 +1,124 @@
+
+.item {
+  background: rgba(250, 250, 250, 0.8);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 20px 35px;
+  height: 216px;
+  background: #FAFAFA;
+  margin: 10px;
+  flex-direction: row;
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__doctor {
+    margin-bottom: 10px;
+  }
+
+  &__status {
+    padding-bottom: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(28, 27, 31, 0.1);
+      transform: translate(0,25px)
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+
+    & button {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.0357143em;
+      color: #4AAF42;
+      border: none;
+      stroke: none;
+      background: none;
+    }
+  }
+}
+
+.content-extra {
+  display: none;
+}
+
+.button-delete {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 2px;
+    width: 20px;
+    background-color: grey;
+    transform: rotate(45deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top:10px;
+    right: 0;
+    height: 2px;
+    width: 20px;
+    background-color: grey;
+    transform: rotate(-45deg);
+  }
+}
+.status-done{
+  background-color: #ECEBEC;
+}
+.status-green{
+  color: green;
+}
+.status-red{
+  color: red;
+}
+
+@media screen and (max-width: $breakpoint-xs) {
+  .item {
+    padding: 20px 20px;
+    &__doctor {
+      font-size: $fontSize14;
+    }
+    &__status {
+      font-size: $fontSize14;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-sm) {
+  .item {
+    &__name {
+      font-size: $fontSize16;
+    }
+  }
+}

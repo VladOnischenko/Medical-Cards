@@ -1,0 +1,19 @@
+.card-hidden{
+	display: none;
+}
+
+.search-mark{
+	background-color: #49af4275;
+	border-radius: 5px;
+}
+
+.no-visits{
+	padding: 0px;
+	font-size: 24px;
+	color: $mainFontColor;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

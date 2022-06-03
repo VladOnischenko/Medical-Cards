@@ -1,0 +1,168 @@
+.hidden {
+    display: none;
+}
+.form {
+    font-family: $mainFontFamily;
+    padding: 40px 0;
+    &__header {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: #1c1b1f;
+        border: none;
+        padding: 0 41px;
+    }
+    &__green-box {
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        background: $mainGreenColor;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding: 36px 60px 0 60px;
+    }
+    &__input {
+        font-size: $fontSize16;
+        width: 100%;
+        line-height: 14px;
+        background-color: #fff;
+        border: 1px solid $strokeFormInputColor;
+        border-radius: 4px;
+        padding: 16px 0 16px 20px;
+        margin-bottom: 25px;
+        transition: $animationStyle;
+        text-align: start;
+        &:hover {
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+        }
+        &:focus {
+            outline: none;
+            stroke: none;
+            border: 1px solid $strokeFormInputColor;
+        }
+    }
+
+    &__dropbox-item {
+       padding: 1rem;
+        &:hover {
+            padding: 1rem 1.5rem;
+        }
+        &:active {
+            padding: 1rem;
+        }
+    }
+
+    &__checkbox-text {
+        font-size: 16px;
+        width: fit-content;
+    }
+    &__checkbox {
+        margin-right: 10px;
+    }
+    &__footer {
+        border: none;
+        justify-content: center;
+    }
+    &__submit-bnt {
+        width: 30%;
+        background: $mainGreenColor;
+        color: $whiteColor;
+        border-radius: 100px;
+        margin-top: 36px;
+        &:hover {
+            color: $whiteColor;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+
+        }
+    }
+    &__status-btn {
+        width: fit-content;
+        padding-right: 16px;
+        &--green {
+            background: $mainGreenColor;
+        }
+        &--red {
+            background: #ce1515;
+        }
+    }
+}
+
+.visit-modal {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .form {
+        &__input {
+            padding: 19px 0 19px 20px;
+            margin-bottom: 30px;
+        }
+        &__submit-bnt {
+            width: 40%;
+        }
+        &__dropbox-item {
+            padding: 1.5rem;
+            &:hover {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: $breakpoint-xs) {
+    .form {
+        &__input {
+            padding: 16px 0 16px 20px;
+            font-size: $fontSize14;
+        }
+        &__body {
+            padding: 35px 40px 0;
+        }
+        &__submit-bnt {
+            font-size: $fontSize16;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    .form {
+        &__input {
+            margin-bottom: 20px;
+        }
+        &__body {
+            padding: 35px 25px 0;
+        }
+        &__checkbox-text {
+            font-size: $fontSize12;
+        }
+    }
+}
+
+#visitModalDropdownMenuDoctors {
+    @extend .form__input;
+}
+
+div.form__input {
+    width: 100%;
+    line-height: 0;
+    background-color: none;
+    border: none;
+    border-radius: none;
+    padding: 0;
+    margin-bottom: 0;
+    transition: none;
+    &:hover {
+        box-shadow: none;
+    }
+    &:focus {
+        outline: none;
+        stroke: none;
+        border: none;
+    }
+}
+

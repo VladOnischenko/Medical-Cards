@@ -1,0 +1,37 @@
+.dropdown-toggle::after {
+  position: absolute;
+  right: 15px;
+}
+div.visit-modal > .dropdown-toggle::after {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+.dropdown-toggle:focus::after {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  padding: 0;
+  min-width: 5rem;
+}
+.modal-footer {
+  padding: 0;
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .col-10 {
+    width: 91.333333%;
+  }
+
+}
+@media screen and (max-width: $breakpoint-md) {
+  .row-cols-2 > * {
+    width: 100%;
+  }
+  .modal-content {
+    width: 94%;
+  }
+  .modal-dialog-centered {
+    justify-content: center;
+  }
+}

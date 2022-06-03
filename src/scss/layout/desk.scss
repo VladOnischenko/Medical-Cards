@@ -1,0 +1,48 @@
+
+.desk {
+  min-height: 478px;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  position: relative;
+  background: rgba(243, 237, 247, 0.94);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 260px;
+  @include flex-center;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__items-container {
+    height: 100%;
+    padding: 40px 0;
+    margin-top: 0;
+    position: relative;
+    align-content: flex-start;
+
+  }
+
+  &__items-container:empty:after {
+    font-size: 24px;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    color: $mainFontColor;
+    @include flex-center;
+    content: 'No items have been added';
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .desk {
+    max-height: calc(100vh - 160px);
+    margin-bottom: 200px;
+    &__items-container:empty:after {
+      font-size: $fontSize20;
+    }
+  }
+}

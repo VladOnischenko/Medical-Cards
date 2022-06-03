@@ -1,0 +1,44 @@
+.header {
+  height: 70px;
+  background: $mainGreenColor;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    font-weight: 500;
+    font-size: $fontSize14;
+    padding: 10px 25px;
+    background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+    border: none;
+    color: $mainFontColor;
+    transition: $animationStyle;
+    &:hover {
+      background: linear-gradient(0deg, rgba(103, 80, 164, 0.2), rgba(103, 80, 164, 0.08)), #FFFBFE;
+    }
+    &:active {
+      background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)),
+      linear-gradient(0deg, #FFFBFE, #FFFBFE);
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .header {
+    height: 50px;
+    &__container {
+      & > a > svg {
+        height: 35px;
+        & > path:last-of-type {
+          display: none;
+        }
+      }
+    }
+    &__button {
+      padding: 8px 25px;
+      font-size: $fontSize12;
+    }
+  }
+}
